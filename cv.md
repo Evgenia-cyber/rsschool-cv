@@ -50,3 +50,7 @@ I don't have any commercial development experience yet, but I have a some simple
 ### Education:
 
 I study on my own from YouTube videos and articles from the Internet
+
+### English: level A2
+
+
