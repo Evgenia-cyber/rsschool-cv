@@ -46,3 +46,7 @@ I don't have any commercial development experience yet, but I have a some simple
 
 - Tic-tac-toe: https://github.com/Evgenia-cyber/-tic-tac-toe
 - Todo: https://github.com/Evgenia-cyber/todo
+
+### Education:
+
+I study on my own from YouTube videos and articles from the Internet
