@@ -1,15 +1,26 @@
 body,
 figure {
   margin: 0;
-  font-size: 1.7rem;
+}
+body {
+  font-size: 1.3rem;
 }
 footer,
 header {
   background-color: #111;
   color: #fff;
 }
+header {
+  padding-top: 3rem;
+}
 main {
-  background: linear-gradient(to right, #111 50%, #ffffff 50%);
+  background: linear-gradient(
+    to right,
+    #111 0%,
+    #111 30%,
+    #ffffff 30%,
+    #ffffff 100%
+  );
 }
 section {
   padding-bottom: 25px;
@@ -19,23 +30,27 @@ h3 {
 }
 ul {
   list-style: none;
+  padding-left: 0;
 }
 .container {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
 }
 .left {
   flex-basis: 50%;
+  text-align: center;
   background-color: #111;
   color: #fff;
 }
 .right {
-  flex-basis: 50%;
+  flex-basis: 70%;
   margin-left: 2rem;
 }
 .photo {
-  max-width: 100%;
+  width: 70%;
+  height: 400px;
+  object-fit: cover;
 }
 .position {
   font-size: 2rem;
@@ -44,9 +59,7 @@ ul {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-}
-.examples {
-  padding-left: 0;
+  flex-wrap: wrap;
 }
 .example {
   margin-bottom: 10px;
@@ -55,7 +68,7 @@ ul {
   color: #ff8c09;
   margin-bottom: 20px;
   text-decoration: none;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
 }
 .color {
   color: #ff8c09;
@@ -73,4 +86,61 @@ ul {
 .rs-school {
   width: 100px;
   background-color: #ff8c09;
+}
+
+@media screen and (min-width: 3000px) {
+  main {
+    background: linear-gradient(
+      to right,
+      #111 0%,
+      #111 45%,
+      #ffffff 40%,
+      #ffffff 100%
+    );
+  }
+}
+@media screen and (max-width: 900px) {
+  header .right {
+    margin-left: 1rem;
+  }
+  main {
+    background: none;
+  }
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+  main .container {
+    display: block;
+    margin: 1rem;
+  }
+  main .left {
+    padding-left: 2rem;
+  }
+  .right {
+    margin-left: 0;
+  }
+  .right h3 {
+    text-align: center;
+  }
+  section {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  .photo {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 1rem;
+  }
+  .photo {
+    width: 150px;
+    height: 200px;
+  }
+  /* header .left{
+   padding-left: 0rem;
+  } */
 }
