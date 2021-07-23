@@ -2,17 +2,21 @@ body,
 figure {
   margin: 0;
 }
+
 body {
   font-size: 1.3rem;
 }
+
 footer,
 header {
   background-color: #111;
   color: #fff;
 }
+
 header {
   padding-top: 3rem;
 }
+
 main {
   background: linear-gradient(
     to right,
@@ -22,67 +26,82 @@ main {
     #ffffff 100%
   );
 }
+
 section {
   padding-bottom: 25px;
 }
+
 h3 {
   text-decoration: underline;
 }
+
 ul {
   list-style: none;
   padding-left: 0;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
 }
+
 .left {
   flex-basis: 50%;
   text-align: center;
   background-color: #111;
   color: #fff;
 }
+
 .right {
   flex-basis: 70%;
   margin-left: 2rem;
 }
+
 .photo {
   width: 70%;
   height: 400px;
   object-fit: cover;
 }
+
 .position {
   font-size: 2rem;
 }
+
 .item {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
+
 .example {
   margin-bottom: 10px;
 }
+
 .example a {
   color: #ff8c09;
   margin-bottom: 20px;
   text-decoration: none;
   font-size: 1.5rem;
 }
+
 .color {
   color: #ff8c09;
   margin-left: 10px;
 }
+
 .footer {
   display: flex;
   justify-content: space-around;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
 .footer a {
   color: #ff8c09;
 }
+
 .rs-school {
   width: 100px;
   background-color: #ff8c09;
