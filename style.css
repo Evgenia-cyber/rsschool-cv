@@ -48,6 +48,7 @@ ul {
 
 .left {
   flex-basis: 50%;
+  margin-left: 1rem;
   text-align: center;
   background-color: #111;
   color: #fff;
@@ -56,11 +57,14 @@ ul {
 .right {
   flex-basis: 70%;
   margin-left: 2rem;
+  margin-right: 1rem;
 }
 
 .photo {
   width: 70%;
   height: 400px;
+  border-left: 5px solid #ff8c09;
+  border-bottom: 5px solid #ff8c09;
   object-fit: cover;
 }
 
@@ -124,6 +128,7 @@ ul {
   }
   main {
     background: none;
+    text-align: center;
   }
   header .container {
     flex-direction: column;
@@ -136,12 +141,20 @@ ul {
   }
   main .left {
     padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 0;
   }
   .right {
     margin-left: 0;
+    margin-right: 0;
   }
   .right h3 {
     text-align: center;
+  }
+  ul.skills {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   section {
     padding-bottom: 0.5rem;
@@ -151,15 +164,13 @@ ul {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 450px) {
   body {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .photo {
     width: 150px;
     height: 200px;
   }
-  /* header .left{
-   padding-left: 0rem;
-  } */
 }
