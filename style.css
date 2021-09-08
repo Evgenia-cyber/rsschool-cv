@@ -188,10 +188,6 @@ a {
 }
 
 @media screen and (max-width: 900px) {
-  body.lock {
-    overflow: hidden;
-  }
-
   header {
     padding-top: 1rem;
   }
@@ -199,6 +195,12 @@ a {
   .menu {
     position: relative;
     transform: translateX(-200px);
+    transition: transform var(--transition-duration);
+  }
+
+  .menu-active {
+    transform: translateX(0px);
+    transition: transform var(--transition-duration);
   }
 
   .burger-menu-icon i,
