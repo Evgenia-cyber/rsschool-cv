@@ -308,3 +308,10 @@ a {
     height: 200px;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .item span {
+    flex-basis: 100%;
+    text-align: start;
+  }
+}
