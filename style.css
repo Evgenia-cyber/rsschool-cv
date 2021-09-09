@@ -144,6 +144,12 @@ a {
   color: var(--hover-accent-color);
 }
 
+.project-img {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+
 .color {
   color: var(--accent-color);
   margin-left: 10px;
