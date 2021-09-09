@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="short icon" href="assets/img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/stackoverflow-dark.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Kurineva Evgenia</title>
   </head>
@@ -24,7 +32,7 @@
             <li><a href="#contacts">Contacts</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#about">About me</a></li>
-            <li><a href="#examples">Code examples</a></li>
+            <li><a href="#examples">Code example</a></li>
             <li><a href="#projects">My projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#english">English</a></li>
@@ -93,20 +101,26 @@
             </p>
           </section>
           <section id="examples">
-            <h3>Code examples</h3>
+            <h3>Code example</h3>
             <div>
-              <ul>
-                <li class="example">
-                  <a href="https://github.com/Evgenia-cyber/-tic-tac-toe"
-                    ><i class="fas fa-code fa-fw"></i> Tic-tac-toe</a
-                  >
-                </li>
-                <li class="example">
-                  <a href="https://github.com/Evgenia-cyber/todo"
-                    ><i class="fas fa-code fa-fw"></i> Todo</a
-                  >
-                </li>
-              </ul>
+              <pre><code>const bingo = (tickets, win) => {
+                let countWin = 0;
+              
+                tickets.map((ticket) => {
+                  const string = ticket[0];
+                  const number = ticket[1];
+                  const length = string.length;
+                  for (let i = 0; i < length; i++) {
+                    const charCode = string.charCodeAt(i);
+                    if (charCode === number) {
+                      countWin++;
+                      break;
+                    }
+                  }
+                });
+              
+                return countWin >= win ? 'Winner!' : 'Loser!';
+              };</code></pre>
             </div>
           </section>
           <section id="projects">
@@ -175,6 +189,10 @@
       src="https://kit.fontawesome.com/a4751cc1a4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
