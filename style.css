@@ -64,8 +64,8 @@ a {
 }
 
 .menu-link {
-    color: var(--accent-color);
-    font-size: 1.5rem;
+  color: var(--accent-color);
+  font-size: 1.5rem;
 }
 
 .burger-menu-icon,
@@ -131,9 +131,20 @@ a {
 
 .item {
   display: flex;
-  align-items: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
+}
+
+.contacts .item,
+.skills .item {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts .item i,
+.skills .item i {
+  margin-right: 1rem;
 }
 
 .project-img {
@@ -147,7 +158,7 @@ a {
   margin-left: 10px;
 }
 
-.code-link{
+.code-link {
   color: #000000;
 }
 
@@ -156,7 +167,6 @@ a {
   padding-bottom: 2rem;
   text-align: center;
 }
-
 
 @media screen and (min-width: 3000px) {
   main {
@@ -172,12 +182,12 @@ a {
 
 @media screen and (max-width: 900px) {
   header {
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
 
   .menu {
     position: relative;
-    transform: translateX(-200px);
+    transform: translateX(-250px);
     transition: transform var(--transition-duration);
   }
 
@@ -200,7 +210,7 @@ a {
 
   .burger-menu-icon-close {
     position: absolute;
-    left: 9rem;
+    left: 11rem;
     display: block;
     z-index: 1;
   }
@@ -221,6 +231,8 @@ a {
   }
 
   .menu-list li {
+    padding-right: 2rem;
+    padding-left: 2rem;
     padding-bottom: 2rem;
   }
 
@@ -253,6 +265,7 @@ a {
   .right {
     margin-left: 0;
     margin-right: 0;
+    text-align: center;
   }
 
   .right h3 {
@@ -261,8 +274,13 @@ a {
 
   ul.skills {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+
+  ul.skills .item {
+   width: 200px;
+   padding-left: 80px;
   }
 
   section {
@@ -275,7 +293,7 @@ a {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 655px) {
   body {
     font-size: 1.1rem;
   }
@@ -284,11 +302,10 @@ a {
     width: 150px;
     height: 200px;
   }
-}
 
-@media screen and (max-width: 390px) {
-  .item span {
-    flex-basis: 100%;
-    text-align: start;
-  }
+  ul.skills .item {
+    width: auto;
+    padding-left: 0px;
+    padding-right: 2rem;
+   }
 }
