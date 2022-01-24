@@ -25,7 +25,6 @@
             <li><a href="#contacts">Contacts</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#about">About me</a></li>
-            <li><a href="#examples">Code example</a></li>
             <li><a href="#projects">My projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#english">English</a></li>
@@ -109,29 +108,6 @@
               good analytical skills, easy to learn and I work well in a team.
             </p>
           </section>
-          <section id="examples">
-            <h3>Code example</h3>
-            <div>
-              <pre><code>const bingo = (tickets, win) => {
-                let countWin = 0;
-              
-                tickets.map((ticket) => {
-                  const string = ticket[0];
-                  const number = ticket[1];
-                  const length = string.length;
-                  for (let i = 0; i &lt; length; i++) {
-                    const charCode = string.charCodeAt(i);
-                    if (charCode === number) {
-                      countWin++;
-                      break;
-                    }
-                  }
-                });
-              
-                return countWin >= win ? 'Winner!' : 'Loser!';
-              };</code></pre>
-            </div>
-          </section>
           <section id="projects">
             <h3>My projects</h3>
             <div>
@@ -194,14 +170,6 @@
       </div>
     </footer>
 
-    <script
-      src="https://kit.fontawesome.com/a4751cc1a4.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-    <script>
-      hljs.highlightAll();
-    </script>
     <script src="script.js"></script>
   </body>
 </html>
