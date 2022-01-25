@@ -1,6 +1,8 @@
 :root {
   --accent-color: #ff8c09;
   --hover-accent-color: #c56901;
+  --bg-color: #111111;
+  --slide-btn-bg-color: #484848;
 
   --transition-duration: 0.3s;
 }
@@ -20,7 +22,7 @@ body {
 
 footer,
 header {
-  background-color: #111;
+  background-color: var(--bg-color);
   color: #fff;
 }
 
@@ -115,6 +117,7 @@ a {
   flex-basis: 70%;
   margin-left: 2rem;
   margin-right: 1rem;
+  min-width: 0; /* для нормальной работы слайдера */
 }
 
 .photo {
@@ -147,19 +150,18 @@ a {
   margin-right: 1rem;
 }
 
-.project-img {
-  width: 100%;
-  height: 100%;
-  max-width: 500px;
-}
-
 .color {
   color: var(--accent-color);
   margin-left: 10px;
 }
 
 .code-link {
-  color: #000000;
+  color: var(--accent-color);
+  transition: color var(--transition-duration);
+}
+
+.code-link:hover {
+  color: var(--hover-accent-color);
 }
 
 .footer {
@@ -277,10 +279,9 @@ a {
     flex-wrap: wrap;
   }
 
-
   ul.skills .item {
-   width: 200px;
-   padding-left: 80px;
+    width: 200px;
+    padding-left: 80px;
   }
 
   section {
@@ -307,5 +308,48 @@ a {
     width: auto;
     padding-left: 0px;
     padding-right: 2rem;
-   }
+  }
+}
+
+/* Slider */
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  top: 61%;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--slide-btn-bg-color);
+  transition: background-color var(--transition-duration);
+}
+
+.projects-swiper .swiper-button-next:hover,
+.projects-swiper .swiper-button-prev:hover {
+  background-color: var(--bg-color);
+}
+
+.projects-swiper .swiper-button-next::after,
+.projects-swiper .swiper-button-prev::after {
+  color: var(--accent-color);
+  font-size: 20px;
+}
+
+.projects-swiper .project-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.projects-swiper .swiper-pagination {
+  position: static;
+}
+
+.projects-swiper .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 9px;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
 }
