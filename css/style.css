@@ -299,6 +299,11 @@ a {
     font-size: 1.1rem;
   }
 
+  h1,
+  .position {
+    font-size: 20px;
+  }
+
   .photo {
     width: 150px;
     height: 200px;
@@ -339,6 +344,10 @@ a {
 
   ul.skills {
     justify-content: flex-start;
+  }
+
+  ul.skills .item {
+    flex-basis: 100%;
   }
 }
 
