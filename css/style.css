@@ -1,0 +1,410 @@
+:root {
+  --accent-color: #ff8c09;
+  --hover-accent-color: #c56901;
+  --bg-color: #111111;
+  --slide-btn-bg-color: #484848;
+
+  --transition-duration: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+figure {
+  margin: 0;
+}
+
+body {
+  font-size: 1.3rem;
+}
+
+footer,
+header {
+  background-color: var(--bg-color);
+  color: #fff;
+}
+
+header {
+  padding-top: 3rem;
+}
+
+main {
+  background: linear-gradient(
+    to right,
+    #111 0%,
+    #111 30%,
+    #ffffff 30%,
+    #ffffff 100%
+  );
+}
+
+section {
+  padding-bottom: 25px;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* menu */
+
+.menu-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-link {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.burger-menu-icon,
+.burger-menu-icon-close {
+  display: none;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.menu-list li {
+  color: var(--accent-color);
+}
+
+.menu-list li a,
+.contacts li a span {
+  transition: color var(--transition-duration);
+}
+
+.menu-list li a:hover,
+.contacts li a span:hover {
+  color: var(--hover-accent-color);
+  cursor: pointer;
+}
+/* /menu */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.left {
+  flex-basis: 50%;
+  margin-left: 1rem;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+}
+
+.right {
+  flex-basis: 70%;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  min-width: 0; /* для нормальной работы слайдера */
+}
+
+.photo {
+  width: 70%;
+  height: 400px;
+  border-left: 5px solid var(--accent-color);
+  border-bottom: 5px solid var(--accent-color);
+  object-fit: cover;
+}
+
+.position {
+  font-size: 2rem;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.contacts .item,
+.skills .item {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts .item i,
+.skills .item i {
+  margin-right: 1rem;
+}
+
+.color {
+  color: var(--accent-color);
+  margin-left: 10px;
+}
+
+.code-link {
+  color: var(--accent-color);
+  transition: color var(--transition-duration);
+}
+
+.code-link:hover {
+  color: var(--hover-accent-color);
+}
+
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 3000px) {
+  main {
+    background: linear-gradient(
+      to right,
+      #111 0%,
+      #111 45%,
+      #ffffff 40%,
+      #ffffff 100%
+    );
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding-top: 2rem;
+  }
+
+  .menu {
+    position: relative;
+    transform: translateX(-500px);
+    transition: transform var(--transition-duration);
+  }
+
+  .menu-active {
+    transform: translateX(0px);
+    transition: transform var(--transition-duration);
+  }
+
+  .burger-menu-icon i,
+  .burger-menu-icon-close i {
+    color: var(--accent-color);
+    transition: color var(--transition-duration);
+  }
+
+  .burger-menu-icon {
+    position: absolute;
+    left: 1rem;
+    display: block;
+  }
+
+  .burger-menu-icon-close {
+    position: absolute;
+    left: 11rem;
+    display: block;
+    z-index: 1;
+  }
+
+  .burger-menu-icon i:hover,
+  .burger-menu-icon-close i:hover {
+    color: var(--hover-accent-color);
+    cursor: pointer;
+  }
+
+  .menu-list {
+    position: absolute;
+    top: -1rem;
+    flex-direction: column;
+    margin: 0;
+    padding: 2rem 1rem 0;
+    background-color: #000000;
+  }
+
+  .menu-list li {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  header .right {
+    margin-left: 1rem;
+  }
+
+  main {
+    background: none;
+    text-align: center;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  header .left,
+  header .right {
+    margin-left: 0;
+  }
+
+  main .container {
+    display: block;
+    margin: 1rem;
+  }
+
+  main .left {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 0;
+  }
+
+  .right {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .right h3 {
+    text-align: center;
+  }
+
+  ul.skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul.skills .item {
+    width: 200px;
+    padding-left: 80px;
+  }
+
+  section {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .photo {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  h1,
+  .position {
+    font-size: 20px;
+  }
+
+  .photo {
+    width: 150px;
+    height: 200px;
+  }
+
+  ul.contacts .item {
+    width: 300px;
+  }
+
+  ul.skills .item {
+    width: auto;
+    padding-left: 0px;
+    padding-right: 2rem;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  ul.skills {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  ul.contacts .item {
+    width: auto;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  ul.contacts .item a {
+    width: 100%;
+  }
+
+  ul.contacts .item .color {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  ul.skills {
+    justify-content: flex-start;
+  }
+
+  ul.skills .item {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .swiper-slide p {
+    display: none;
+  }
+}
+
+/* Slider */
+
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  top: 61%;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--slide-btn-bg-color);
+  transition: background-color var(--transition-duration);
+  /* убрать рамку , которая появляется при клике по кнопке на мобильном*/
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.projects-swiper .swiper-button-next:hover,
+.projects-swiper .swiper-button-prev:hover {
+  background-color: var(--bg-color);
+}
+
+.projects-swiper .swiper-button-next::after,
+.projects-swiper .swiper-button-prev::after {
+  color: var(--accent-color);
+  font-size: 20px;
+}
+
+.projects-swiper .project-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.projects-swiper .swiper-pagination {
+  position: static;
+}
+
+.projects-swiper .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 9px;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
