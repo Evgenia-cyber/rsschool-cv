@@ -253,6 +253,11 @@ a {
     padding-bottom: 1rem;
   }
 
+  header .left,
+  header .right {
+    margin-left: 0;
+  }
+
   main .container {
     display: block;
     margin: 1rem;
