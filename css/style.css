@@ -189,7 +189,7 @@ a {
 
   .menu {
     position: relative;
-    transform: translateX(-250px);
+    transform: translateX(-500px);
     transition: transform var(--transition-duration);
   }
 
@@ -304,14 +304,52 @@ a {
     height: 200px;
   }
 
+  ul.contacts .item {
+    width: 300px;
+  }
+
   ul.skills .item {
     width: auto;
     padding-left: 0px;
     padding-right: 2rem;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  ul.skills {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  ul.contacts .item {
+    width: auto;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  ul.contacts .item a {
+    width: 100%;
+  }
+
+  ul.contacts .item .color {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  ul.skills {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .swiper-slide p {
+    display: none;
   }
 }
 
 /* Slider */
+
 .projects-swiper .swiper-button-next,
 .projects-swiper .swiper-button-prev {
   top: 61%;
@@ -321,6 +359,9 @@ a {
   border: 1px solid var(--accent-color);
   background-color: var(--slide-btn-bg-color);
   transition: background-color var(--transition-duration);
+  /* убрать рамку , которая появляется при клике по кнопке на мобильном*/
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .projects-swiper .swiper-button-next:hover,
